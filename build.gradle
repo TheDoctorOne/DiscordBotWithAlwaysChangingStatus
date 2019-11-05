@@ -1,0 +1,23 @@
+plugins {
+    id'java'
+    id'application'
+    id'com.github.johnrengelman.shadow' version '4.0.4'
+}
+
+mainClassName = 'io.github.thedoctorone.DiscordBotWithAlwaysChangingStatus.BotUI'
+
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile ('net.dv8tion:JDA:4.0.0_56') {
+        exclude module: 'opus-java'
+    }
+}
+
+compileJava.options.encoding = 'UTF-8'
